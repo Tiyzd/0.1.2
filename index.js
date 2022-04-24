@@ -1274,8 +1274,9 @@ audio20 = fs.readFileSync('./X3/nayla20.m4a')
 			mentions(`[ *GANTENG RATE* ]\n\n${tz} *USER* : @${mentioned[0].split('@')[0]}\n${tz} *KEGANTENGAN* : ${randomnay1}${randomnay2}% ${emoji}\n${tz} *TIMER* : ${time}`, mentioned, true)						 			
 			break 						    
 		    case 'menu': case 'help':
+			gambar = fs.readFileSync('./X2/menu.jpg')
 		  	Reply("MENAMPILKAN MENU" + namabot)	
-			menu3 = `⚯⚯[ *BOTZ V16.2* ]⚯⚯
+			menu3 = `⚯⚯[ *BETA 0.1.2* ]⚯⚯
 [ *${tz}* ] ➙ *OWNER* : ${nama} 
 [ *${tz}* ] ➙ *PREFIX* : *${prefix}* 
 [ *${tz}* ] ➙ *TOTAL BLOCK :* ${nayla.blocklist.length} 
@@ -1284,7 +1285,6 @@ audio20 = fs.readFileSync('./X3/nayla20.m4a')
 [ *${tz}* ] ➙ *MANUFACTURER :* ${nayla.user.phone.device_manufacturer}
 [ *${tz}* ] ➙ *MNC :* ${nayla.user.phone.mnc}
 [ *${tz}* ] ➙ *OS VERSION :* ${nayla.user.phone.os_version}
-[ *${tz}* ] ➙ *MODEL :* ${nayla.user.phone.device_model}
 [ *${tz}* ] ➙ *VERSION :* ${nayla.version}
 [ *${tz}* ] ➙ *BUILD :* ${nayla.user.phone.os_build_number}
 [ *${tz}* ] ➙ *BROWSER :* ${nayla.browserDescription[1]}
@@ -1296,6 +1296,7 @@ audio20 = fs.readFileSync('./X3/nayla20.m4a')
 [ *${tz}* ] ➙ *MESSAGE LOG :* ${nayla.msgCount}
 [ *${tz}* ] ➙ *CONTACT CHEKLIST :* ${nayla.phoneCheckListeners}
 [ *${tz}* ] ➙ *LOGGER LEVEL :* ${nayla.logger.level}
+[ *${tz}* ] ➙ *BOT VERSION* :Beta 0.1.2
 
 ⚯⚯[ *GROUPMENU* ] <[ *12* ]>⚯⚯
 [ *${tz}* ] ➙ *${prefix}hidetag*
@@ -1575,27 +1576,27 @@ audio20 = fs.readFileSync('./X3/nayla20.m4a')
 
 ⚯⚯[ *THX TO* ] <[ *5* ]>⚯⚯
 [ *${tz}* ] ➙ *${nama}*
-[ *${tz}* ] ➙ *NAYLA [ OTHER ]*
-[ *${tz}* ] ➙ *LORD RIYANN* 
-[ *${tz}* ] ➙ *LOLYKILLERS*
+[ *${tz}* ] ➙ *TiyzdBot [ OTHER ]*
+[ *${tz}* ] ➙ *NodeJs* 
+[ *${tz}* ] ➙ *2022*
 [ *${tz}* ] ➙ *ADIWAJSHING/BAILEYS*`    
 // NOTE : JGN HAPUS THX TO!!
 // HAPUS? GW GA UP LAGI OKY 
-menu4 = `⚯⚯⚯[ *JOIN GRUB* ]⚯⚯⚯
+menu4 = `⚯⚯⚯[ *PROMTE* ]⚯⚯⚯
 
-⚯⚯[ *GRUB* ] <[ *1* ]>⚯⚯ 
+⚯⚯[ *IKLAN1* ] <[ *1* ]>⚯⚯ 
 ${setting.linkgrub1} 
-⚯⚯[ *GRUB* ] <[ *2* ]>⚯⚯
+⚯⚯[ *IKLAN2* ] <[ *2* ]>⚯⚯
 ${setting.linkgrub2} 
-⚯⚯[ *GRUB* ] <[ *3* ]>⚯⚯
+⚯⚯[ *IKLAN#* ] <[ *3* ]>⚯⚯
 ${setting.linkgrub3}
 ⚯⚯⚯⚯⚯⚯⚯⚯⚯⚯⚯`    
             try{ 
             sound = fs.readFileSync('./X2/menu.mp3')
-            nayla.sendMessage(from, sound, audio, {mimetype: "audio/mp4", ptt:true, quoted:nay1})
+            nayla.sendMessage(from, gambar, image, {mimetype: "menu/jpg", ptt:true, quoted:nay1})
             } catch (e) { console.log(color("JIKA INGIN MENAMBAHKAN AUDIO/SOUND PADA MENU, SILAHKAN ADD/TEMPEL AUDIO KALIAN DI VOLDER X2, LALU UBAH NAMA SOUND MENJADI menu.mp3", 'green'))}            
             const menu1 = [
-            {buttonId: 'id1', buttonText: {displayText: `DONASI`}, type: 1},            
+            {buttonId: 'id1', buttonText: {displayText: `DONATE`}, type: 1},            
             {buttonId: 'id2', buttonText: {displayText: `PENDAPAT`}, type: 1},
             {buttonId: 'id3', buttonText: {displayText: `OWNERBOT`}, type: 1}]
             const menu2 = {contentText: menu3, footerText: menu4, buttons: menu1,headerType: 1}      
@@ -1603,7 +1604,7 @@ ${setting.linkgrub3}
 			break                         		     
 		    default:
 		    if (body.startsWith(`${prefix}${command}`)) {
-		    reply(`[ *403 NOT FOUND* ]\n\n_Maaf fitur ${command} sepertinya tidak terdaftar di dalam menu bot, silahkan cek menu kembali:)_`)
+		    reply(`[ *WARN!!* ]\n\n_Maaf fitur ${command} sepertinya tidak terdaftar di dalam menu bot, silahkan cek menu kembali:)_`)
 		    }
 		    if (budy.includes("https://")){
 	    	if (!isGroup) return
